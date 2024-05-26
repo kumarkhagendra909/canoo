@@ -1,0 +1,22 @@
+First step using scrapy framework 
+then decided to scrape data from finance.yahoo.com/quote/GOEV
+then will see a menubar like a navbar having
+[
+{"link": "/quote/GOEV"} basically this last one was summary,
+{"link": "/quote/GOEV/news"},
+{"link": "/quote/GOEV/chart"},
+{"link": "/quote/GOEV/community"},
+{"link": "/quote/GOEV/key-statistics"},
+{"link": "/quote/GOEV/history"},
+{"link": "/quote/GOEV/profile"},
+{"link": "/quote/GOEV/financials"},
+{"link": "/quote/GOEV/analysis"},
+{"link": "/quote/GOEV/options"},
+{"link": "/quote/GOEV/holders"},
+{"link": "/quote/GOEV/sustainability"}
+]
+
+so to get the links of all the have to write correct response.css CSSSELECTOR
+and yield out it and save it 
+and also we need to visit each site for later study as we need to know about the company and all 
+and key player from where i can get that ?
