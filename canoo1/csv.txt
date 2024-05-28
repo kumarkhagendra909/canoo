@@ -1,17 +1,5 @@
-# Define your item pipelines here
-#
-# Don't forget to add your pipeline to the ITEM_PIPELINES setting
-# See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-
-
-# useful for handling different item types with a single interface
-from itemadapter import ItemAdapter
- 
+import csv
 import sqlite3
-
-
-import sqlite3
-from itemadapter import ItemAdapter
 
 class Canoo1Pipeline:
     def __init__(self):
@@ -56,25 +44,15 @@ class Canoo1Pipeline:
                            item['close_price'], item['adj_close'], item['volume']))
         self.conn.commit()
 
+    def export_to_csv(self, filename="historical_data.csv"):
+        self.curr.execute("SELECT * FROM historical_data")
+        rows = self.curr.fetchall()
+        with open(filename, 'w', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(['id', 'date', 'open_price', 'high_price', 'low_price', 'close_price', 'adj_close', 'volume'])
+            writer.writerows(rows)
+
     def close_spider(self, spider):
         if spider.name == "historicalspider":
+            self.export_to_csv()
             self.conn.close()
-
-
-# class Canoo1Pipeline:
-#     def __init__(self):
-#         self.create_connection()
-
-#     def create_connection(self):
-#         try:
-#             self.conn = sqlite3.connect("canoo_inc_db.db")
-#         except sqlite3.Error as e:
-#             print("Error connecting to SQLite database:", e)
-
-#     def close_spider(self, spider):
-#         self.conn.close()
-
-#     def process_item(self, item, spider):
-#         # print("table nama", str(str(spider.name) + "_table"))
-#         # print(f"Item {str(str(spider.name) + "_table")  }")
-#         return item

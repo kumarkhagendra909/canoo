@@ -105,3 +105,4 @@ LOG_FORMAT = "%(asctime)s [%(name)s] %(levelname)s: %(message)s"
 
 # Optionally, specify the file where log messages will be saved
 LOG_FILE = "scrapy.log"
+ 

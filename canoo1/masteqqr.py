@@ -1,7 +1,7 @@
 from canoo1.spiders.profilespider import ProfilespiderSpider
 from canoo1.spiders.mainspider import MainspiderSpider
 from canoo1.spiders.historicalspider import HistoricalspiderSpider
-
+# import scrapy 
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 
@@ -24,4 +24,4 @@ if __name__ == "__main__":
     # Start the crawling process and pass the callback function
     process.start()
 
-    callback() # at the end of the process
+    callback() # at the end of the process ...

@@ -1,0 +1,14 @@
+Project Name: Learning Web Scraping with Scrapy: Finance Yahoo for GOEV Ticker Symbol
+
+Description:
+This repository chronicles my journey in mastering web scraping using Scrapy, with a specific focus on extracting financial data from Yahoo Finance for the GOEV (Canoo Inc) ticker symbol within the auto manufacturing industry. Representing a work-in-progress, it serves as a window into the strides I've made thus far in this educational odyssey.
+
+Key Features:
+Employing Scrapy for the meticulous extraction of web data.
+Implementation of a virtual environment to manage dependencies effectively.
+Incorporation of three distinct spiders, each targeting disparate websites for data retrieval.
+Utilization of a Python program to oversee the concurrent execution of all three spiders.
+Future endeavors will address concerns related to thread safety and will involve the integration of data storage into an SQL database.
+
+Note:
+This project remains fluid and dynamic as I endeavor to delve deeper into the multifaceted capabilities of Scrapy while refining my web scraping prowess. I welcome feedback and contributions from fellow enthusiasts as I persistently strive to elevate my proficiency in web scraping with Scrapy. Join me in this exploration of the boundless possibilities afforded by web scraping technology.
